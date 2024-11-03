@@ -1,0 +1,6 @@
+<div class="board">
+    <div *ngFor="let row of board; let i = index" class="board-row">
+        <div *ngFor="let cell of row; let j = index" [ngClass]="{ 'board-cell': true, 'fill': board[i][j] }">
+        </div>
+    </div>
+</div>

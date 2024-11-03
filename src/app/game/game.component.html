@@ -1,0 +1,26 @@
+<main>
+  <section>
+    <form class="setup-form">
+      <mat-form-field class="input">
+        <mat-label>Width</mat-label>
+        <input matInput type="number" [formControl]="width">
+      </mat-form-field>
+      
+      <mat-form-field class="input">
+        <mat-label>Height</mat-label>
+        <input matInput type="number" [formControl]="height">
+      </mat-form-field>
+    </form>
+  
+    <footer>
+      <button mat-raised-button (click)="startGame()">Start</button>
+      <button mat-raised-button (click)="clearBoard()">Clear Board</button>
+    </footer>
+  </section>
+
+  <app-board *ngIf="gameStarted"
+    [reset]="reset"
+    [boardWidth]="boardWidth"
+    [boardHeight]="boardHeight"
+  ></app-board>
+</main>
